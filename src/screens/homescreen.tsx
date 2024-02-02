@@ -1,15 +1,37 @@
-/* eslint-disable prettier/prettier */
-import {Text, View} from 'react-native';
 import React from 'react';
+import { View, ScrollView, ActivityIndicator } from 'react-native';
 
-const Home = () => {
+import { Clubs, CTA, Header, Feeds, Events, Resources } from '../components';
+
+const HomeScreen = ({ navigation }) => {
+  const isLoading = false; // Placeholder for data loading state
+
   return (
-    <View>
-      <Text> Home </Text>
+    <View style={styles.container}>
+      <Header />
+
+      {isLoading ? (
+        <ActivityIndicator size="large" color="#0000ff" />
+      ) : (
+        <ScrollView>
+          <Feeds />
+          <Resources />
+          <Events />
+          <Clubs />
+          <CTA />
+        </ScrollView>
+      )}
     </View>
   );
 };
 
-export default Home;
+// Add your main container styles here
+const styles = {
+  container: {
+    flex: 1,
+    backgroundColor: '#F4F4F4',
+    padding: 20,
+  },
+};
 
-// const styles = StyleSheet.create({});
+export default HomeScreen;

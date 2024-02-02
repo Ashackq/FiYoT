@@ -1,7 +1,1 @@
-module.exports = {
-  arrowParens: 'avoid',
-  bracketSameLine: true,
-  bracketSpacing: false,
-  singleQuote: true,
-  trailingComma: 'all',
-};
+// d:\Prog\Webdev\native\japmala\.prettierrc
