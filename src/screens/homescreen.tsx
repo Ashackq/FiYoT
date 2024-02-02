@@ -8,7 +8,9 @@ const HomeScreen = ({ navigation }) => {
 
   return (
     <View style={styles.container}>
-      <Header />
+      <View style={styles.head}>
+        <Header />
+      </View>
 
       {isLoading ? (
         <ActivityIndicator size="large" color="#0000ff" />
@@ -31,6 +33,13 @@ const styles = {
     flex: 1,
     backgroundColor: '#F4F4F4',
     padding: 20,
+  },
+  head: {
+    position: 'absolute',
+    top: 0,
+    right: 0,
+    left: 0,
+    zIndex: 1000,
   },
 };
 
