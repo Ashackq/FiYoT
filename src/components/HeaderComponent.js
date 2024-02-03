@@ -2,6 +2,8 @@ import { View, Text, TouchableOpacity, StyleSheet, Image } from 'react-native';
 import React, { useState } from 'react';
 import Sidemenu from './sidemenu';
 import { colors } from '../devdata/constants/lang';
+import Ham from '../devdata/assets/ham.png'
+
 
 const Header = (navigation) => {
   const [showSideMenu, setShowSideMenu] = useState(false);
@@ -16,7 +18,7 @@ const Header = (navigation) => {
   return (
     <View style={styles.header}>
       <TouchableOpacity onPress={toggleSideMenu} style={styles.headerButton}>
-        {/* <Image source={} alt={'Hello'} style={styles.icon} /> */}
+        <Image source={Ham} style={styles.icon} />
       </TouchableOpacity>
 
       {showSideMenu && (
